@@ -1,0 +1,180 @@
+/* 全体の基本設定 */
+body /*基本的な設定*/
+{
+    font-family: sans-serif;        /* シンプルで読みやすいフォント */
+    background-color: #f5f5f5;    /* 明るい背景色 */
+    color: #333;                  /* ダークグレーのテキスト */
+    margin: 0;                      /* ブラウザのデフォルトマージンをリセット */
+    padding: 0;                     /* ブラウザのデフォルトパディングをリセット */
+}
+
+/* 各セクション共通 */
+section, article 
+{
+    max-width: 800px;               /* コンテンツの最大幅を設定 */
+    margin: 40px auto;              /* 上下のスペースを40px、左右は自動で中央寄せ */
+    padding: 30px;                  /* 内側のスペースを30px */
+    background-color: white;      /* セクションの背景色を白に設定 */
+    border-radius: 8px;             /* 角を丸くする */  
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);  /* 軽い影を追加 */
+}
+
+/* ヘッダー */
+header {
+    background-color: #2c3e50;      /* ダークブルーの背景色 */
+    color: white;                   /* テキストを白に設定 */
+    text-align: center;               /* テキストを中央揃え */
+    padding: 60px 20px;               /* 上下のスペースを60px、左右は20px */
+}
+
+/* ヘッダーの見出し */
+header h1 {
+    font-size: 48px;                  /* 大きな見出しサイズ */
+    margin: 0;                        /* マージンをリセット */
+}
+
+/* タグライン */
+.tagline {
+    font-size: 18px;                  /* タグラインのフォントサイズ */
+    color: #bdc3c7;                 /* タグラインの色を薄いグレーに設定 */
+    margin-top: 10px;                 /* タグラインと見出しの間にスペースを追加 */
+}
+
+/* 見出し */
+h2 {
+    font-size: 28px;                    /* セクション見出しのサイズ */
+    border-bottom: 3px solid #2c3e50; /* 見出しの下にダークブルーの線を追加　solidは実線 */
+    padding-bottom: 8px;                /* 見出しと線の間にスペースを追加 */
+    margin-bottom: 20px;                /* 見出しと次のコンテンツの間にスペースを追加 */
+}
+
+/* プロフィール本文を左右配置 */
+#about .profile-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  column-gap: 24px;
+}
+
+#about .profile-text {
+  min-width: 0;
+}
+
+#about .face-photo {
+  width: 170px;
+  height: 300px;
+  object-fit: cover;
+  justify-self: end;   /* 右端に固定 */
+  /* border-radius: 8px; 角丸にしたい場合は有効化 */
+}
+
+
+
+
+
+/* 趣味リスト */
+#hobbies ul {
+    list-style: disc;           /* 箇条書きのスタイルをディスクに設定 */
+    padding-left: 20px;         /* 箇条書きの左側にスペースを追加 */
+    line-height: 2;             /* 行間を広げて読みやすくする */
+}
+
+/* 作品リスト */
+.work-item {
+  margin-top: 16px;             /* 作品アイテムの上部にスペースを追加 */
+}
+
+/* 作品リンク */
+.work-link {
+  display: block;               /* ブロック要素にして全体をクリック可能にする */
+  color: inherit;               /* 親要素のテキストカラーを継承 */
+  text-decoration: none;        /* デフォルトの下線を削除 */
+  border: 1px solid #e1e1e1;  /* 薄いグレーの境界線を追加 */
+  border-radius: 8px;           /* 角を丸くする */
+  padding: 16px;                /* 内側のスペースを追加 */
+  transition: transform 0.2s, box-shadow 0.2s;  /* ホバー時の変化にスムーズなトランジションを追加 */
+}
+
+/* 作品リンクのホバー効果 */
+.work-link:hover {
+  transform: translateY(-2px);                  /* 少し上に移動 */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* 影を強調 */
+}
+
+/* サムネイル画像 */
+.thumb-list {
+  display: grid;                            /* グリッドレイアウトを使用 */
+  grid-template-columns: repeat(3, 1fr);    /* 3列のグリッド */    
+  gap: 10px;                                /* グリッドアイテム間のスペース */
+  margin-top: 12px;                         /* 上部のスペース */
+}
+
+/* サムネイル画像のスタイル */
+.thumb-image {
+  width: 100%;                              /* 画像をコンテナの幅に合わせる */
+  height: 120px;                            /* 固定の高さを設定 */
+  object-fit: contain;                      /* 画像全体を枠内に収める（見切れなし） */
+  border-radius: 6px;                       /* 角を丸くする */
+  border: 1px solid #ddd;                 /* 画像の周りに薄い境界線を追加 */
+}
+
+
+/* work_25ページ用: 文字と画像を中央表示 */
+.work_25 {
+    text-align: center;
+}
+
+.work_25 .work-link {
+    display: flex; /* フレックスボックスを使用して中央揃え */
+    flex-direction: column;
+    align-items: center;
+}
+
+.work_25 .thumb-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.work_25 .thumb-image {
+    width: min(100%, 420px);
+    height: auto;
+}
+
+
+/* 動画 */
+video {
+    width: 100%;                            /* 動画をコンテナの幅に合わせる */
+    height: 400px;                          /* 固定の高さを設定 */
+    border-radius: 8px;                     /* 角を丸くする */
+    margin-top: 12px;                       /* 上部のスペース */
+}
+
+/* SNSリンク */
+.sns-links {
+    display: flex;                          /* フレックスボックスを使用 */
+    gap: 16px;                              /* リンク間のスペース */
+}
+
+.sns-links a {
+    padding: 10px 24px;                     /* 内側のスペースを追加 */
+    background-color: #2c3e50;            /* ダークブルーの背景色 */
+    color: white;                         /* テキストを白に設定 */
+    text-decoration: none;                  /* デフォルトの下線を削除 */
+    border-radius: 4px;                     /* 角を丸くする */
+    font-weight: bold;                      /* テキストを太字にする */
+     transition: background-color 0.2s;     /* ホバー時の背景色の変化にスムーズなトランジションを追加 */
+}
+
+.sns-links a:hover {
+    background-color: #3d5166;            /* ホバー時に少し明るいダークブルーに変更 */
+}
+
+/* フッター */
+footer {
+    text-align: center;             /* テキストを中央揃え */
+    padding: 20px;                  /* 内側のスペースを追加 */
+    color: #888;                  /* フッターテキストの色を薄いグレーに設定 */
+    font-size: 14px;                /* フッターテキストのサイズを小さく設定 */
+}
+

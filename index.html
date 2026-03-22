@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- 基本的な形（フォントとか） -->
+
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードの指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- レスポンシブデザインのためのビューポート設定 -->
+    <title>プロフィール</title> <!-- タイトルの指定 -->
+    <link rel="stylesheet" href="style.css"> <!-- 外部CSSファイルのリンク -->
+</head>
+
+<body>
+
+    <!-- ヘッダー：名前 -->
+    <header>
+        <h1>松本陽汰</h1>
+        <p class="tagline">HAL大阪ゲーム学科</p>
+        <p class="tagline">プログラマー志望の音楽とゲームが好きな人生エンジョイ勢の人</p>
+    </header>
+
+    <main>
+
+
+        <!-- 自己紹介 -->
+        <section id="about">
+            <h2>プロフィール</h2>
+            <div class="profile-content">
+                <div class="profile-text">
+                    <p>学科: HAL大阪ゲーム学科</p>
+                    <p>名前: <ruby>松本<rt>まつもと</rt></ruby><ruby>陽汰<rt>ひなた</rt></ruby></p>
+                    <p>生年月日: 2006年11月11日</p>
+                    <p>出身地: 大阪府</p>
+                    <p>好きなこと: 音楽、ゲーム、神社巡り</p>
+                </div>
+                <img src="pic/ネムイ写真.jpg" alt="ネムイの写真" class="face-photo">
+            </div>
+        </section>
+
+        <!-- 趣味 -->
+        <section id="hobbies">
+            <h2>趣味</h2>
+            <ul>
+                <li>作曲</li>
+                <li>神社巡り</li>
+                <li>ゲーム</li>
+            </ul>
+        </section>
+
+        <!-- 制作物 -->
+        <section id="works">
+            <h2>制作物</h2>
+            <div class="work-item"><!-- クリックで別タブで詳細ページに飛ぶようにする -->
+                <!-- クリックで別タブで詳細ページに飛ぶようにする  -->
+                <!-- 内容は左からCSSクラスをつけている、クリック時の移動先、リンク先を新しいタブで開く設定、
+              空いた先のページから元ページを操作されにくくする、繊維元の情報を送らないようにする-->
+
+                <a class="work-link" href="work_25.html" target="_blank" rel="noopener noreferrer">
+                    <h3>一年次（2025年度）制作</h3>
+                    <p>クリックで詳細ページを別タブで開きます。</p>
+                    <!-- サムネイル画像 -->
+                    <div class="thumb-list">
+                        <!-- 処理の意味は左からファイル指定、画像名、cssのクラス名 -->
+                        <img src="pic/work_25/違和感探しタイトル.png" alt="違和感探しタイトル" class="thumb-image">
+                        <img src="pic/work_25/敵をぶっ飛ばすゲームタイトル.png" alt="敵をぶっ飛ばすゲームタイトル" class="thumb-image">
+                        <img src="pic/work_25/俺の物語タイトル.png" alt="俺の物語タイトル" class="thumb-image">
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SNSリンク -->
+        <section id="sns">
+            <h2>SNS</h2>
+            <div class="sns-links">
+                <a href="https://twitter.com/sunny_sleep" target="_blank">X (Twitter)</a>
+                <a href="https://www.instagram.com/xxsunnyxxplacexx" target="_blank">Instagram</a>
+            </div>
+        </section>
+
+
+        <!-- フッター -->
+        <footer>
+            <p>&copy; HAL大阪 松本陽汰</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
