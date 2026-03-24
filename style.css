@@ -178,3 +178,65 @@ footer {
     font-size: 14px;                /* フッターテキストのサイズを小さく設定 */
 }
 
+ /* ==========================================================================
+   スマホ向けレスポンシブ対応（画面幅が768px以下の場合に適用されるスタイル）
+   ========================================================================== */
+    @media screen and (max-width: 768px) {
+
+        /* セクションの余白と内側のスペースをスマホ向けに縮小 */
+        section,
+        article {
+            margin: 20px 10px;
+            padding: 15px;
+        }
+
+        /* ヘッダーの文字サイズと余白を縮小 */
+        header {
+            padding: 40px 10px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        .tagline {
+            font-size: 14px;
+        }
+
+        /* プロフィールの画像とテキストを縦並びに変更 */
+        #about .profile-content {
+            grid-template-columns: 1fr;
+            /* 1列に変更 */
+            gap: 20px;
+        }
+
+        #about .face-photo {
+            justify-self: center;
+            /* 写真を中央に配置 */
+            width: 140px;
+            /* 画像サイズを少し小さく */
+            height: auto;
+        }
+
+        /* 制作物のサムネイル画像を縦並び（1列）に変更 */
+        .thumb-list {
+            grid-template-columns: 1fr;
+        }
+
+        .thumb-image {
+            height: auto;
+            /* 高さを自動にして見切れを防止 */
+            aspect-ratio: 16 / 9;
+            /* 縦横比を維持（必要に応じて） */
+        }
+
+        /* SNSリンクを縦に並べる（スマホだと横並びははみ出す可能性があるため） */
+        .sns-links {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sns-links a {
+            text-align: center;
+        }
+    }
