@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- 基本的な形（フォントとか） -->
+
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードの指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- レスポンシブデザインのためのビューポート設定 -->
+    <title>松本陽汰の公式ページ</title> <!-- タイトルの指定 -->
+    <link rel="stylesheet" href="style.css?v=2"> <!-- 外部CSSファイルのリンク -->
+</head>
+
+<body>
+
+    <!-- ヘッダー：名前 -->
+    <header>
+        <h1>ネムイ</h1>
+        <p class="tagline">HAL大阪ゲーム学科</p>
+        <p class="tagline">プログラマー志望の音楽とゲームが好きな人生エンジョイ勢の人</p>
+    </header>
+
+    <main>
+        <!--注意-->
+        <section id="about">
+            <h2>注意</h2>
+            <div class="profile-content">
+                <div class="profile-text">
+                    <p>ここは僕が直接会った方にしかお見せしていないサイトです</p>
+                    <p>僕個人の連絡先も掲載しているため、たとえ知り合いだとしてもサイトのリンクは共有しないでください</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 自己紹介 -->
+        <section id="about">
+            <h2>プロフィール</h2>
+            <div class="profile-content">
+                <div class="profile-text">
+                    <p>学科: HAL大阪ゲーム学科</p>
+                    <p>名前: 松本陽汰</p>
+                    <p>生年月日: 2006年11月11日</p>
+                    <p>出身地: 大阪府</p>
+                    <p>実績: 学内GameJam2026春 企業賞</p>
+                </div>
+                <img src="pic/ネムイ写真.jpg" alt="ネムイの写真" class="face-photo">
+            </div>
+        </section>
+
+        <!-- 趣味 -->
+        <section id="hobbies">
+            <h2>ネムイについて</h2>
+            <ul>
+                <p>
+                    物心がついた時から、DS、Wiiがある環境で育ち、中学三年の進路相談の時に「自分の好きなものはゲームだからゲームの仕事をしたい」
+                    と思うようになり、高校からゲームクリエイターを志すようになる。
+                </p>
+                <p>
+                    中学時代吹奏楽部だったこともあり、ゲームミュージックの道を考えたこともあったが、音楽の道は厳しいと感じ
+                    音楽は趣味として高校二年から作曲を始めつつ、プログラマーを志すようになったが、
+                    現在はゲーム内のSE、BGMを作りながらプログラムを組んでいる。
+
+                </p>
+            </ul>
+        </section>
+
+        <!-- 制作物 -->
+        <section id="works">
+            <h2>制作物</h2>
+            <div class="work-item"><!-- クリックで別タブで詳細ページに飛ぶようにする -->
+                <!-- クリックで別タブで詳細ページに飛ぶようにする  -->
+                <!-- 内容は左からCSSクラスをつけている、クリック時の移動先、リンク先を新しいタブで開く設定、
+                空いた先のページから元ページを操作されにくくする、繊維元の情報を送らないようにする-->
+
+                <a class="work-link" href="work_25/work_25.html">
+                    <h3>一年次（2025年度）制作</h3>
+                    <p>クリックで詳細ページを開きます。</p>
+                    <!-- サムネイル画像 -->
+                    <div class="thumb-scroll-container">
+                        <div class="thumb-scroll-track">
+                            <!-- 1グループ目 -->
+                            <div class="thumb-group">
+                                <img src="pic/work_25/違和感探しタイトル.png" alt="違和感探しタイトル" class="thumb-image">
+                                <img src="pic/work_25/敵をぶっ飛ばすゲームタイトル.png" alt="敵をぶっ飛ばすゲームタイトル" class="thumb-image">
+                                <img src="pic/work_25/俺の物語タイトル.png" alt="俺の物語タイトル" class="thumb-image">
+                                <img src="pic/work_25/いちごを均等に分けるゲームタイトル.jpg" alt="いちごを均等に分けるゲームタイトル"
+                                    class="thumb-image">
+                            </div>
+                            <!-- 2グループ目（無限ループ用・音声読み上げ等から隠すaria-hidden設定） -->
+                            <div class="thumb-group" aria-hidden="true">
+                                <img src="pic/work_25/違和感探しタイトル.png" alt="違和感探しタイトル" class="thumb-image">
+                                <img src="pic/work_25/敵をぶっ飛ばすゲームタイトル.png" alt="敵をぶっ飛ばすゲームタイトル" class="thumb-image">
+                                <img src="pic/work_25/俺の物語タイトル.png" alt="俺の物語タイトル" class="thumb-image">
+                                <img src="pic/work_25/いちごを均等に分けるゲームタイトル.jpg" alt="いちごを均等に分けるゲームタイトル"
+                                    class="thumb-image">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="work-link" href="work_26/work_26_GameJam_summer.html">
+                    <h3>2年次（2026年度）制作</h3>
+                    <p>クリックで詳細ページを開きます。</p>
+                    <!-- サムネイル画像 -->
+
+                    <!--現在作品数が少ないためスクロールはしない-->
+
+                    <img src="pic/work_26/いい距離たもって!ちきゅうちゃん!タイトル.png" alt="いい距離たもって!ちきゅうちゃん!タイトル" class="thumb-image">
+
+
+                </a>
+            </div>
+        </section>
+
+        <!-- SNSリンク -->
+        <section id="sns">
+            <h2>SNS</h2>
+            <div class="sns-links">
+                <a href="https://twitter.com/sunny_sleep" target="_blank">X (Twitter)</a>
+                <a href="https://www.instagram.com/xxsunnyxxplacexx" target="_blank">Instagram</a>
+                <a href="https://discordapp.com/users/797039897213927425" target="_blank">Discord</a>
+            </div>
+        </section>
+
+
+        <!-- フッター -->
+        <footer>
+            <p>&copy; HAL大阪 松本陽汰</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
